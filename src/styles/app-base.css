@@ -1,0 +1,450 @@
+/*@tailwind base;*/
+
+/**
+ * Custom base styles
+ */
+
+* {
+  /* Text rendering */
+  text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -webkit-text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* :focus {
+  outline: none !important;
+}
+
+html {
+  font-size: 62.5%;
+  font-family:
+    'Inter var',
+    Roboto,
+    Helvetica Neue,
+    Arial,
+    sans-serif;
+  background-color: #121212;
+}
+
+body {
+  font-size: 14px;
+  line-height: 1.4;
+  overflow-x: hidden;
+  font-feature-settings: 'salt';
+}
+
+html,
+body {
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+  flex: 1 1 auto;
+}
+
+#root {
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+  
+  /* background-position: center; */
+  /* background-size: cover; */
+  
+}
+
+#root #login-wrapper {
+  background-color: #E0F2F1;
+  opacity: 1;
+  background-image: url('http://ada.assets.vermicstudios.com.s3.amazonaws.com/2023/LearningHub/demo/definition/clouds-bg-set.svg');
+  background-repeat: repeat;
+  /* background:
+    linear-gradient(135deg, #00858255 25%, transparent 25%) -29px 0/ 58px 58px,
+    linear-gradient(225deg, #008582 25%, transparent 25%) -29px 0/ 58px 58px,
+    linear-gradient(315deg, #00858255 25%, transparent 25%) 0px 0/ 58px 58px,
+    linear-gradient(45deg, #008582 25%, #123a37 25%) 0px 0/ 58px 58px; */
+}
+
+h1,
+.h1 {
+  font-size: 24px;
+}
+
+h2,
+.h2 {
+  font-size: 20px;
+}
+
+h3,
+.h3 {
+  font-size: 16px;
+}
+
+h4,
+.h4 {
+  font-size: 15px;
+}
+
+h5,
+.h5 {
+  font-size: 13px;
+}
+
+h6,
+.h6 {
+  font-size: 12px;
+}
+
+.ps > .ps__rail-y,
+.ps > .ps__rail-x {
+  z-index: 99;
+}
+
+a[role='button'] {
+  text-decoration: none;
+}
+
+[role='tooltip'] {
+  z-index: 9999;
+}
+
+.MuiModal-root:not(.subject-modal):not(.add-activity-modal) {
+  z-index: 199999;
+}
+
+.MuiSnackbar-root {
+  z-index: 999999;
+}
+
+.MuiTablePagination-select {
+  margin-top: 8px;
+}
+
+.sidebar-button-toggle {
+  opacity: 0.7;
+  transition: all 1s;
+}
+
+.sidebar-button-toggle:hover {
+  opacity: 1;
+}
+
+@media (min-width: 765px) {
+  .sidebar-button-toggle {
+    opacity: 1;
+  }
+}
+
+/* Medium Devices, Desktops Only */
+@media only screen and (min-width: 992px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  ::-webkit-scrollbar:hover {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0.06);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border: 2px solid transparent;
+    border-radius: 20px;
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    border-radius: 20px;
+  }
+}
+
+form label {
+  z-index: 99;
+}
+
+body.no-animate *,
+body.no-animate *::before,
+body.no-animate *::after {
+  transition: none !important;
+  animation: none !important;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Removes webkit's autofill backgorund color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transitiondelay: 9999s;
+  transitionproperty: background-color, color;
+}
+
+:focus {
+  outline-color: transparent;
+}
+
+/*fullcalendar Fix*/
+.fc-scrollgrid-section-liquid {
+  height: 1px !important;
+}
+
+/*Animation for login*/
+
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #123a37;
+  overflow: hidden;
+}
+
+.background span {
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 20vmin;
+  backface-visibility: hidden;
+  position: absolute;
+  animation: move;
+  animation-duration: 45;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.background span:nth-child(0) {
+  color: #0d4544;
+  top: 2%;
+  left: 1%;
+  animation-duration: 39s;
+  animation-delay: -23s;
+  transform-origin: -23vw -23vh;
+  box-shadow: 40vmin 0 5.549570858816412vmin currentColor;
+}
+.background span:nth-child(1) {
+  color: #0d4544;
+  top: 27%;
+  left: 51%;
+  animation-duration: 27s;
+  animation-delay: -35s;
+  transform-origin: -6vw 12vh;
+  box-shadow: -40vmin 0 5.022517666432852vmin currentColor;
+}
+.background span:nth-child(2) {
+  color: #0d4544;
+  top: 14%;
+  left: 78%;
+  animation-duration: 14s;
+  animation-delay: -15s;
+  transform-origin: 15vw -13vh;
+  box-shadow: -40vmin 0 5.678507849049816vmin currentColor;
+}
+.background span:nth-child(3) {
+  color: #0d4544;
+  top: 73%;
+  left: 93%;
+  animation-duration: 32s;
+  animation-delay: -37s;
+  transform-origin: 14vw 18vh;
+  box-shadow: 40vmin 0 5.425085360042117vmin currentColor;
+}
+.background span:nth-child(4) {
+  color: #0d4544;
+  top: 45%;
+  left: 67%;
+  animation-duration: 25s;
+  animation-delay: -11s;
+  transform-origin: -9vw 6vh;
+  box-shadow: 40vmin 0 5.98378338701197vmin currentColor;
+}
+.background span:nth-child(5) {
+  color: #0d4544;
+  top: 75%;
+  left: 89%;
+  animation-duration: 38s;
+  animation-delay: -8s;
+  transform-origin: 19vw -8vh;
+  box-shadow: 40vmin 0 5.4436759921997675vmin currentColor;
+}
+.background span:nth-child(6) {
+  color: #008582;
+  top: 54%;
+  left: 77%;
+  animation-duration: 8s;
+  animation-delay: -17s;
+  transform-origin: 5vw 19vh;
+  box-shadow: -40vmin 0 5.799113121625737vmin currentColor;
+}
+.background span:nth-child(7) {
+  color: #60c3c1;
+  top: 55%;
+  left: 68%;
+  animation-duration: 28s;
+  animation-delay: -24s;
+  transform-origin: 5vw 22vh;
+  box-shadow: -40vmin 0 5.615393268946299vmin currentColor;
+}
+.background span:nth-child(8) {
+  color: #008582;
+  top: 99%;
+  left: 74%;
+  animation-duration: 28s;
+  animation-delay: -31s;
+  transform-origin: -7vw 7vh;
+  box-shadow: -40vmin 0 5.8023301621475305vmin currentColor;
+}
+.background span:nth-child(9) {
+  color: #0d4544;
+  top: 17%;
+  left: 76%;
+  animation-duration: 50s;
+  animation-delay: -2s;
+  transform-origin: 5vw -16vh;
+  box-shadow: 40vmin 0 5.790336067574405vmin currentColor;
+}
+.background span:nth-child(10) {
+  color: #60c3c1;
+  top: 85%;
+  left: 87%;
+  animation-duration: 17s;
+  animation-delay: -44s;
+  transform-origin: 23vw 18vh;
+  box-shadow: 40vmin 0 5.179541828920305vmin currentColor;
+}
+.background span:nth-child(11) {
+  color: #60c3c1;
+  top: 10%;
+  left: 36%;
+  animation-duration: 54s;
+  animation-delay: -24s;
+  transform-origin: 8vw -21vh;
+  box-shadow: -40vmin 0 5.523510484816885vmin currentColor;
+}
+.background span:nth-child(12) {
+  color: #0d4544;
+  top: 36%;
+  left: 73%;
+  animation-duration: 28s;
+  animation-delay: -46s;
+  transform-origin: -5vw 16vh;
+  box-shadow: 40vmin 0 5.496430067954774vmin currentColor;
+}
+.background span:nth-child(13) {
+  color: #60c3c1;
+  top: 27%;
+  left: 38%;
+  animation-duration: 45s;
+  animation-delay: -49s;
+  transform-origin: -15vw 17vh;
+  box-shadow: -40vmin 0 5.115668761641075vmin currentColor;
+}
+.background span:nth-child(14) {
+  color: #008582;
+  top: 37%;
+  left: 85%;
+  animation-duration: 14s;
+  animation-delay: -47s;
+  transform-origin: 12vw -18vh;
+  box-shadow: 40vmin 0 5.241156414531473vmin currentColor;
+}
+.background span:nth-child(15) {
+  color: #0d4544;
+  top: 26%;
+  left: 35%;
+  animation-duration: 11s;
+  animation-delay: -21s;
+  transform-origin: 14vw 9vh;
+  box-shadow: -40vmin 0 5.514759531017381vmin currentColor;
+}
+.background span:nth-child(16) {
+  color: #008582;
+  top: 22%;
+  left: 50%;
+  animation-duration: 55s;
+  animation-delay: -31s;
+  transform-origin: -2vw 17vh;
+  box-shadow: 40vmin 0 5.129880250949871vmin currentColor;
+}
+.background span:nth-child(17) {
+  color: #008582;
+  top: 61%;
+  left: 43%;
+  animation-duration: 24s;
+  animation-delay: -6s;
+  transform-origin: 7vw 4vh;
+  box-shadow: 40vmin 0 5.3508618426612555vmin currentColor;
+}
+.background span:nth-child(18) {
+  color: #0d4544;
+  top: 37%;
+  left: 56%;
+  animation-duration: 21s;
+  animation-delay: -3s;
+  transform-origin: -10vw -1vh;
+  box-shadow: -40vmin 0 5.233568191800925vmin currentColor;
+}
+.background span:nth-child(19) {
+  color: #0d4544;
+  top: 98%;
+  left: 14%;
+  animation-duration: 14s;
+  animation-delay: -41s;
+  transform-origin: 20vw 6vh;
+  box-shadow: -40vmin 0 5.309018666432998vmin currentColor;
+}
+
+/* Doc Previewer */
+
+#react-doc-viewer #proxy-renderer,
+#react-doc-viewer #pdf-renderer{
+  max-width: 100%;
+}
+
+#react-doc-viewer #pdf-renderer {
+  box-shadow: 2px 3px 16px -6px rgba(0,0,0,0.25);
+}
+
+#react-doc-viewer #header-bar,
+#react-doc-viewer #pdf-download,
+#react-doc-viewer #pdf-zoom-reset{
+  display: none;
+}
+
+#m_excelEmbedRenderer_m_ewaEmbedViewerBar{
+  display: none;
+}
+
+#msdoc-renderer {
+  min-height: 500px;
+}
+
+.capitalize{
+  text-transform: capitalize;
+}
+
+/* Quiz styles */
+
+.checkbox-showresults-incorrect svg path{
+  d: path("M19,3H5c-1.1,0-2,.9-2,2v14c0,1.1.9,2,2,2h14c1.1,0,2-.9,2-2V5c0-1.1-.9-2-2-2ZM16.1,17.6l-4.1-4.1-4.1,4.1-1.5-1.5,4.1-4.1-4.1-4.1,1.5-1.5,4.1,4.1,4.1-4.1,1.5,1.5-4.1,4.1,4.1,4.1-1.5,1.5Z");
+}

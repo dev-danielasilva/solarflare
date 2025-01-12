@@ -1,0 +1,60 @@
+@font-face {
+    font-family: Sofia Soft;
+    font-weight: 300;
+    font-named-instance: 'Light';
+    src: url("SofiaProSoftLight.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Sofia Soft;
+    font-weight: 300;
+    font-style: italic;
+    font-named-instance: 'Light Italic';
+    src: url("SofiaProSoftLightit.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Sofia Soft;
+    font-weight: 400;
+    font-named-instance: 'Regular';
+    src: url("SofiaProSoftReg.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Sofia Soft;
+    font-weight: 400;
+    font-style: italic;
+    font-named-instance: 'Regular Italic';
+    src: url("SofiaProSoftRegit.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Sofia Soft;
+    font-weight: 500;
+    font-named-instance: 'Medium';
+    src: url("SofiaProSoftMed.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Sofia Soft;
+    font-weight: 500;
+    font-style: italic;
+    font-named-instance: 'Medium Italic';
+    src: url("SofiaProSoftMedit.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Sofia Soft;
+    font-weight: 700;
+    font-named-instance: 'Bold';
+    src: url("SofiaProSoftBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Sofia Soft;
+    font-weight: 700;
+    font-style: italic;
+    font-named-instance: 'Bold Italic';
+    src: url("SofiaProSoftBoldit.otf") format("opentype");
+}
+
