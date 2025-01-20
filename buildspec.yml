@@ -1,0 +1,12 @@
+version: 0.2
+env:
+  variables:
+    ECR_SOLARFLARE_REPO_NAME: lh-solarflare
+    AWS_SECONDARY_REGION: us-west-2
+    BUILD_BASE_IMAGE: false
+    BUILD_ENVS: dev
+
+phases:
+  build:
+    commands: 
+      - ./scripts/build_images.sh
